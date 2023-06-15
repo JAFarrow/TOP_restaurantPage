@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'nunitoRegular';
+  src: url('./assets/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunitoItalic';
+  src: url('./assets/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+.nunitoRegular {
+  font-family: 'nunitoRegular';
+}
+
+.nunitoItalic {
+  font-family: 'nunitoItalic';
+}
