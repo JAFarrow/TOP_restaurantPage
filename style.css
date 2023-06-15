@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  font-size: 1.8rem;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 8% 84% 8%;
+}
+
+header {
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contentBody {
+  width: 100%;
+  height: 100%;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tabContainer {
+  width: 100%;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabLink {
+  padding: .15rem;
+  margin: 0 1rem;
+}
+
+#mainView {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainView div {
+  margin: 2rem;
+}
+
+#imgContainer {
+  width: 40%;
+  height: 50%;
+  display: flex;
+}
+
+#imgContainer img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#writeUpContainer {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#writeUpContainer * {
+  padding: .5rem;
+}
+
+footer {
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre;
+}
