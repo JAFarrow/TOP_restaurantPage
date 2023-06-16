@@ -12,7 +12,7 @@ function populateWithMainContent () {
   writeUpContainer.id = 'writeUpContainer'
   mainView.appendChild(writeUpContainer)
 
-  const writeUpHeader = document.createElement('h1')
+  const writeUpHeader = document.createElement('h3')
   writeUpHeader.textContent = 'Lorem Ipsum'
   writeUpHeader.classList.add('nunitoItalic')
   writeUpContainer.appendChild(writeUpHeader)

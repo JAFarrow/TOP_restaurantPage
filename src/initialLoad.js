@@ -25,6 +25,8 @@ function initialPageLoad () {
   mainTab.textContent = 'Main'
   mainTab.id = 'mainTab'
   mainTab.classList.add('tabLink')
+  mainTab.style.backgroundColor = '#046A38'
+  mainTab.style.color = '#e9f7eb'
   tabContainer.appendChild(mainTab)
 
   const menuTab = document.createElement('a')
@@ -46,7 +48,7 @@ function initialPageLoad () {
   footerTextContainer.classList.add('nunitoRegular')
   footerEle.appendChild(footerTextContainer)
 
-  const footerText = document.createElement('h3')
+  const footerText = document.createElement('h5')
   footerText.innerText = 'Built by Justin Farrow | '
   footerTextContainer.appendChild(footerText)
 
