@@ -126,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _initialLoad_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initialLoad.js */ \"./src/initialLoad.js\");\n/* harmony import */ var _mainView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainView.js */ \"./src/mainView.js\");\n\n\n\n(0,_initialLoad_js__WEBPACK_IMPORTED_MODULE_0__.initialPageLoad)()\n;(0,_mainView_js__WEBPACK_IMPORTED_MODULE_1__.populateWithMainContent)()\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _initialLoad_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initialLoad.js */ \"./src/initialLoad.js\");\n/* harmony import */ var _mainView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainView.js */ \"./src/mainView.js\");\n/* harmony import */ var _menuView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menuView.js */ \"./src/menuView.js\");\n\n\n\n\n(0,_initialLoad_js__WEBPACK_IMPORTED_MODULE_0__.initialPageLoad)()\n;(0,_mainView_js__WEBPACK_IMPORTED_MODULE_1__.populateWithMainContent)()\n\n// eslint-disable-next-line no-unused-vars\nconst domMethods = (function () {\n  const documentBody = document.getElementById('contentBody')\n\n  const allTabs = document.querySelectorAll('.tabLink')\n\n  function returnTabMethod (tabId) {\n    switch (tabId) {\n      case 'mainTab':\n        return (0,_mainView_js__WEBPACK_IMPORTED_MODULE_1__.populateWithMainContent)()\n      case 'menuTab':\n        return (0,_menuView_js__WEBPACK_IMPORTED_MODULE_2__.populateWithMenuContent)()\n    }\n  }\n\n  function clearBody () {\n    documentBody.removeChild(documentBody.childNodes[1])\n  }\n\n  function clearTabBackgrounds () {\n    allTabs.forEach((tab) => {\n      tab.style.backgroundColor = '#e9f7eb'\n      tab.style.color = '#000'\n    })\n  }\n\n  allTabs.forEach((tab) => {\n    tab.addEventListener('click', () => {\n      clearTabBackgrounds()\n      tab.style.backgroundColor = '#046A38'\n      tab.style.color = '#e9f7eb'\n      clearBody()\n      returnTabMethod(tab.id)\n    })\n  })\n})()\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ini
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   initialPageLoad: () => (/* binding */ initialPageLoad)\n/* harmony export */ });\n/* harmony import */ var _additionalStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./additionalStyle.css */ \"./src/additionalStyle.css\");\n\n\nfunction initialPageLoad () {\n  const documentContainer = document.getElementById('content')\n\n  const headerEle = document.createElement('header')\n  documentContainer.appendChild(headerEle)\n\n  const headerText = document.createElement('h1')\n  headerText.textContent = 'Prego de (Now)'\n  headerText.classList.add('nunitoItalic')\n  headerEle.appendChild(headerText)\n\n  const mainDiv = document.createElement('main')\n  mainDiv.id = 'contentBody'\n  mainDiv.classList.add('nunitoRegular')\n  documentContainer.appendChild(mainDiv)\n\n  const tabContainer = document.createElement('div')\n  tabContainer.id = 'tabContainer'\n  tabContainer.classList.add('nunitoRegular')\n  mainDiv.appendChild(tabContainer)\n\n  const mainTab = document.createElement('a')\n  mainTab.textContent = 'Main'\n  mainTab.id = 'mainTab'\n  mainTab.classList.add('tabLink')\n  tabContainer.appendChild(mainTab)\n\n  const menuTab = document.createElement('a')\n  menuTab.textContent = 'Menu'\n  menuTab.id = 'menuTab'\n  menuTab.classList.add('tabLink')\n  tabContainer.appendChild(menuTab)\n\n  const contactTab = document.createElement('a')\n  contactTab.textContent = 'Contact'\n  contactTab.id = 'contactTab'\n  contactTab.classList.add('tabLink')\n  tabContainer.appendChild(contactTab)\n\n  const footerEle = document.createElement('footer')\n  documentContainer.appendChild(footerEle)\n\n  const footerTextContainer = document.createElement('div')\n  footerTextContainer.classList.add('nunitoRegular')\n  footerEle.appendChild(footerTextContainer)\n\n  const footerText = document.createElement('h3')\n  footerText.innerText = 'Built by Justin Farrow | '\n  footerTextContainer.appendChild(footerText)\n\n  const footerLink = document.createElement('a')\n  footerLink.innerText = 'Source Code'\n  footerLink.href = 'https://github.com/JAFarrow/TOP_restaurantPage'\n  footerLink.target = '_blank'\n  footerTextContainer.appendChild(footerLink)\n};\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/initialLoad.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   initialPageLoad: () => (/* binding */ initialPageLoad)\n/* harmony export */ });\n/* harmony import */ var _additionalStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./additionalStyle.css */ \"./src/additionalStyle.css\");\n\n\nfunction initialPageLoad () {\n  const documentContainer = document.getElementById('content')\n\n  const headerEle = document.createElement('header')\n  documentContainer.appendChild(headerEle)\n\n  const headerText = document.createElement('h1')\n  headerText.textContent = 'Prego de (Now)'\n  headerText.classList.add('nunitoItalic')\n  headerEle.appendChild(headerText)\n\n  const mainDiv = document.createElement('main')\n  mainDiv.id = 'contentBody'\n  mainDiv.classList.add('nunitoRegular')\n  documentContainer.appendChild(mainDiv)\n\n  const tabContainer = document.createElement('div')\n  tabContainer.id = 'tabContainer'\n  tabContainer.classList.add('nunitoRegular')\n  mainDiv.appendChild(tabContainer)\n\n  const mainTab = document.createElement('a')\n  mainTab.textContent = 'Main'\n  mainTab.id = 'mainTab'\n  mainTab.classList.add('tabLink')\n  mainTab.style.backgroundColor = '#046A38'\n  mainTab.style.color = '#e9f7eb'\n  tabContainer.appendChild(mainTab)\n\n  const menuTab = document.createElement('a')\n  menuTab.textContent = 'Menu'\n  menuTab.id = 'menuTab'\n  menuTab.classList.add('tabLink')\n  tabContainer.appendChild(menuTab)\n\n  const contactTab = document.createElement('a')\n  contactTab.textContent = 'Contact'\n  contactTab.id = 'contactTab'\n  contactTab.classList.add('tabLink')\n  tabContainer.appendChild(contactTab)\n\n  const footerEle = document.createElement('footer')\n  documentContainer.appendChild(footerEle)\n\n  const footerTextContainer = document.createElement('div')\n  footerTextContainer.classList.add('nunitoRegular')\n  footerEle.appendChild(footerTextContainer)\n\n  const footerText = document.createElement('h5')\n  footerText.innerText = 'Built by Justin Farrow | '\n  footerTextContainer.appendChild(footerText)\n\n  const footerLink = document.createElement('a')\n  footerLink.innerText = 'Source Code'\n  footerLink.href = 'https://github.com/JAFarrow/TOP_restaurantPage'\n  footerLink.target = '_blank'\n  footerTextContainer.appendChild(footerLink)\n};\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/initialLoad.js?");
 
 /***/ }),
 
@@ -146,7 +146,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateWithMainContent: () => (/* binding */ populateWithMainContent)\n/* harmony export */ });\n/* harmony import */ var _additionalStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./additionalStyle.css */ \"./src/additionalStyle.css\");\n/* harmony import */ var _assets_mainImg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/mainImg.jpg */ \"./src/assets/mainImg.jpg\");\n\n\n\nfunction populateWithMainContent () {\n  const contentContainer = document.getElementById('contentBody')\n\n  const mainView = document.createElement('div')\n  mainView.id = 'mainView'\n  contentContainer.appendChild(mainView)\n\n  const writeUpContainer = document.createElement('div')\n  writeUpContainer.id = 'writeUpContainer'\n  mainView.appendChild(writeUpContainer)\n\n  const writeUpHeader = document.createElement('h1')\n  writeUpHeader.textContent = 'Lorem Ipsum'\n  writeUpHeader.classList.add('nunitoItalic')\n  writeUpContainer.appendChild(writeUpHeader)\n\n  const writeUpParagraph = document.createElement('p')\n  writeUpParagraph.innerText = 'Lorem Ipsum Lorem Ipsum Lorem Ipsum\\nLorem Ipsum Lorem Ipsum\\nLorem Ipsum Lorem Ipsum'\n  writeUpContainer.appendChild(writeUpParagraph)\n\n  const imgContainer = document.createElement('div')\n  imgContainer.id = 'imgContainer'\n  mainView.appendChild(imgContainer)\n\n  const mainImg = new Image()\n  mainImg.src = _assets_mainImg_jpg__WEBPACK_IMPORTED_MODULE_1__\n  imgContainer.appendChild(mainImg)\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/mainView.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateWithMainContent: () => (/* binding */ populateWithMainContent)\n/* harmony export */ });\n/* harmony import */ var _additionalStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./additionalStyle.css */ \"./src/additionalStyle.css\");\n/* harmony import */ var _assets_mainImg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/mainImg.jpg */ \"./src/assets/mainImg.jpg\");\n\n\n\nfunction populateWithMainContent () {\n  const contentContainer = document.getElementById('contentBody')\n\n  const mainView = document.createElement('div')\n  mainView.id = 'mainView'\n  contentContainer.appendChild(mainView)\n\n  const writeUpContainer = document.createElement('div')\n  writeUpContainer.id = 'writeUpContainer'\n  mainView.appendChild(writeUpContainer)\n\n  const writeUpHeader = document.createElement('h3')\n  writeUpHeader.textContent = 'Lorem Ipsum'\n  writeUpHeader.classList.add('nunitoItalic')\n  writeUpContainer.appendChild(writeUpHeader)\n\n  const writeUpParagraph = document.createElement('p')\n  writeUpParagraph.innerText = 'Lorem Ipsum Lorem Ipsum Lorem Ipsum\\nLorem Ipsum Lorem Ipsum\\nLorem Ipsum Lorem Ipsum'\n  writeUpContainer.appendChild(writeUpParagraph)\n\n  const imgContainer = document.createElement('div')\n  imgContainer.id = 'imgContainer'\n  mainView.appendChild(imgContainer)\n\n  const mainImg = new Image()\n  mainImg.src = _assets_mainImg_jpg__WEBPACK_IMPORTED_MODULE_1__\n  imgContainer.appendChild(mainImg)\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/mainView.js?");
+
+/***/ }),
+
+/***/ "./src/menuView.js":
+/*!*************************!*\
+  !*** ./src/menuView.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateWithMenuContent: () => (/* binding */ populateWithMenuContent)\n/* harmony export */ });\n/* harmony import */ var _assets_pregoRoll_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/pregoRoll.jpg */ \"./src/assets/pregoRoll.jpg\");\n/* harmony import */ var _assets_chorizoHash_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/chorizoHash.jpg */ \"./src/assets/chorizoHash.jpg\");\n/* harmony import */ var _assets_cortado_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/cortado.jpg */ \"./src/assets/cortado.jpg\");\n/* harmony import */ var _assets_francesinha_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/francesinha.jpg */ \"./src/assets/francesinha.jpg\");\n/* harmony import */ var _assets_grilledSardines_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/grilledSardines.jpg */ \"./src/assets/grilledSardines.jpg\");\n/* harmony import */ var _assets_pastiesDeNata_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/pastiesDeNata.jpg */ \"./src/assets/pastiesDeNata.jpg\");\n\n\n\n\n\n\n\nfunction cycleMenuItems (index) {\n  const menuItems = [\n    {\n      img: _assets_pregoRoll_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      title: 'Tender Steak Prego Roll',\n      desc: 'Melt in your mouth steak fried in a delicious garlic and vinegar sauce, topped with fried onion, lettuce and tomato on a crispy Portugese roll.'\n    },\n    {\n      img: _assets_chorizoHash_jpg__WEBPACK_IMPORTED_MODULE_1__,\n      title: 'Chorizo Breakfast Hash Bowl',\n      desc: 'Fried chorizo and hash brown, sauted in garlic and red onion and served with a poached egg and diced tomato. It\\'s as breakfast as breakfast gets.'\n    },\n    {\n      img: _assets_francesinha_jpg__WEBPACK_IMPORTED_MODULE_3__,\n      title: 'Pork Belly Francesinha',\n      desc: 'Sticky pork belly strips, smoked ham slices and a vegatable medley, served as a delightfully cheese-enrobed sandwich topped with runny egg.'\n    },\n    {\n      img: _assets_grilledSardines_jpg__WEBPACK_IMPORTED_MODULE_4__,\n      title: 'Pesto Salt-Grilled Sardines',\n      desc: 'Fresh sardines flame-grilled in a flavour-intensifying salt rub, basted in a simple pesto paste and served with grilled green peppers.'\n    },\n    {\n      img: _assets_pastiesDeNata_jpg__WEBPACK_IMPORTED_MODULE_5__,\n      title: 'Flakey Pastéis De Nata',\n      desc: 'A Portuguese legend, custard tartlets in an flakey egg pastry, caramalized to perfection.'\n    },\n    {\n      img: _assets_cortado_jpg__WEBPACK_IMPORTED_MODULE_2__,\n      title: 'Energizing Cortado Coffee',\n      desc: 'The perfect pick-me-up after a big meal, we deliver our Cortado\\'s steaming hot in a convenient to-go cup.'\n    }\n  ]\n\n  return menuItems[index]\n}\n\nfunction populateWithMenuContent () {\n  const contentContainer = document.getElementById('contentBody')\n\n  const menuView = document.createElement('div')\n  menuView.id = 'menuView'\n  contentContainer.appendChild(menuView)\n\n  const menuHeader = document.createElement('h3')\n  menuHeader.innerText = 'All Items Listed Are To-Go Or For Delivery, Please Enquire About Our Dining Menu Once Seated'\n  menuView.appendChild(menuHeader)\n\n  const menuItemsContainer = document.createElement('div')\n  menuItemsContainer.id = 'menuContainer'\n  menuView.appendChild(menuItemsContainer)\n\n  for (let i = 0; i <= 5; i++) {\n    const menuItemDiv = document.createElement('div')\n    menuItemDiv.classList.add('indvMenuItem')\n\n    const menuItem = cycleMenuItems(i)\n\n    const menuItemImg = new Image()\n    menuItemImg.src = menuItem.img\n    menuItemImg.classList.add('menuItemImg')\n    menuItemDiv.appendChild(menuItemImg)\n\n    const menuItemWriteupContainer = document.createElement('div')\n    menuItemWriteupContainer.classList.add('menuItemWriteupContainer')\n    menuItemDiv.appendChild(menuItemWriteupContainer)\n\n    const menuItemHeader = document.createElement('h5')\n    menuItemHeader.innerText = menuItem.title\n    menuItemHeader.classList.add('menuItemHeader')\n    menuItemWriteupContainer.appendChild(menuItemHeader)\n\n    const menuItemBodyText = document.createElement('p')\n    menuItemBodyText.innerText = menuItem.desc\n    menuItemBodyText.classList.add('menuItemBodyText')\n    menuItemWriteupContainer.appendChild(menuItemBodyText)\n\n    menuItemsContainer.appendChild(menuItemDiv)\n  }\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/menuView.js?");
 
 /***/ }),
 
@@ -170,6 +180,46 @@ eval("module.exports = __webpack_require__.p + \"4a3eef3e0a61b7eb3eda.ttf\";\n\n
 
 /***/ }),
 
+/***/ "./src/assets/chorizoHash.jpg":
+/*!************************************!*\
+  !*** ./src/assets/chorizoHash.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f172d8f1ed4f60fb6982.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/chorizoHash.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/cortado.jpg":
+/*!********************************!*\
+  !*** ./src/assets/cortado.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f9c739b4d25b7ecdeb45.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/cortado.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/francesinha.jpg":
+/*!************************************!*\
+  !*** ./src/assets/francesinha.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"85b31caacf0d3f042202.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/francesinha.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/grilledSardines.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/grilledSardines.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"fb91debffa03f69b03e0.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/grilledSardines.jpg?");
+
+/***/ }),
+
 /***/ "./src/assets/mainImg.jpg":
 /*!********************************!*\
   !*** ./src/assets/mainImg.jpg ***!
@@ -177,6 +227,26 @@ eval("module.exports = __webpack_require__.p + \"4a3eef3e0a61b7eb3eda.ttf\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"ddd8b776bc79805521eb.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/mainImg.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/pastiesDeNata.jpg":
+/*!**************************************!*\
+  !*** ./src/assets/pastiesDeNata.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3288e5644644a9810fdc.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/pastiesDeNata.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/pregoRoll.jpg":
+/*!**********************************!*\
+  !*** ./src/assets/pregoRoll.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"7e8d1fc033dac757986b.jpg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/pregoRoll.jpg?");
 
 /***/ })
 
