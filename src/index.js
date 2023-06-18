@@ -1,9 +1,13 @@
 import { initialPageLoad } from './initialLoad.js'
 import { populateWithMainContent } from './mainView.js'
 import { populateWithMenuContent } from './menuView.js'
+import { populateWithContactContent } from './contactView.js'
 
-initialPageLoad()
-populateWithMainContent()
+// eslint-disable-next-line no-unused-vars
+const loadPage = (function () {
+  initialPageLoad()
+  populateWithMainContent()
+})()
 
 // eslint-disable-next-line no-unused-vars
 const domMethods = (function () {
@@ -17,6 +21,8 @@ const domMethods = (function () {
         return populateWithMainContent()
       case 'menuTab':
         return populateWithMenuContent()
+      case 'contactTab':
+        return populateWithContactContent()
     }
   }
 

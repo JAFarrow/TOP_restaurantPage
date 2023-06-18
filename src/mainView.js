@@ -13,12 +13,12 @@ function populateWithMainContent () {
   mainView.appendChild(writeUpContainer)
 
   const writeUpHeader = document.createElement('h3')
-  writeUpHeader.textContent = 'Lorem Ipsum'
+  writeUpHeader.textContent = 'The Taste Of Portugal, To Your Doorstep!'
   writeUpHeader.classList.add('nunitoItalic')
   writeUpContainer.appendChild(writeUpHeader)
 
   const writeUpParagraph = document.createElement('p')
-  writeUpParagraph.innerText = 'Lorem Ipsum Lorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum\nLorem Ipsum Lorem Ipsum'
+  writeUpParagraph.innerText = 'Spicing up Cape Town since \'09.\nCall in your delivery or enjoy the windy city on our (comfortanbly enclosed) doorstep.'
   writeUpContainer.appendChild(writeUpParagraph)
 
   const imgContainer = document.createElement('div')
