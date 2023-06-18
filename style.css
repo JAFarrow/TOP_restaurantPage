@@ -79,19 +79,22 @@ header {
 }
 
 .tabLink {
-  padding: .15rem;
+  padding: .5rem;
   margin: .2rem 1rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 
 .tabLink:hover {
   margin: 0 1rem;
-  padding-bottom: .4rem;
+  padding-top: 1.2rem;
   cursor: pointer;
 }
 
 #mainView {
   width: 100%;
   height: 100%;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +111,13 @@ header {
 }
 
 #imgContainer img {
+  height: 48rem;
+  width: 48rem;
   max-height: 100%;
   max-width: 100%;
   border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: .3rem solid var(--port-gold);
 }
 
 #writeUpContainer {
@@ -125,21 +132,6 @@ header {
 
 #writeUpContainer * {
   padding: .5rem;
-}
-
-@media (width <= 500px) {
-  #mainView {
-    flex-direction: column;
-  }
-  #writeUpContainer {
-    width: 100%;
-    height: 40%;
-  }
-  #imgContainer {
-    height: 40%;
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 #menuView {
@@ -198,12 +190,43 @@ header {
   }
 }
 
-@media (width <= 450px) {
-  #menuContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-  }
+#contactView {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
+
+#contactImgContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+#contactImgContainer img {
+  max-width: 100%;
+  height: 100%;
+  padding: .3rem;
+  background-color: var(--port-gold);
+}
+
+#contactInfoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#contactInfoContainer h3 {
+  margin-bottom: 3rem;
+}
+
 
 footer {
   grid-row: 3;
@@ -219,4 +242,30 @@ footer div {
   justify-content: center;
   align-items: center;
   white-space: pre;
+}
+
+footer a {
+  color: var(--port-red);
+}
+
+@media (width <= 500px) {
+  html {
+    font-size: 8px;
+  }
+  #mainView {
+    flex-direction: column;
+  }
+  #writeUpContainer {
+    width: 100%;
+    height: 40%;
+  }
+  #imgContainer {
+    height: 40%;
+    width: 100%;
+    justify-content: center;
+  }
+  #menuContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
